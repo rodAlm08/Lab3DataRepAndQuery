@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 
-import { Content } from './components/content';//importing module content to be used here
-import { Footer } from './components/footer';//importing module footer to be used here
-import { Header } from './components/header';//inporting module header
+
+import {Read} from './components/read';//importing read module
+import { Create } from './components/create';
+import {Home} from './components/home';
 
 //imports to be used in the navigation bar
 //bootstrap has a big library of buttons/nav bars, etc
@@ -18,6 +19,7 @@ import {
   Route,
   Routes 
 } from "react-router-dom";
+
 
 class App extends React.Component {
   render() {//render is what will displayed 
@@ -44,9 +46,9 @@ class App extends React.Component {
 
       {/* Routes is where we are going to show a different component*/}
           <Routes>
-            <Route path='/' element={<Content />}></Route>
-            <Route path='/read' element={<Header />}></Route>
-            <Route path='/create' element={<Footer />}></Route>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/read' element={<Read />}></Route>
+            <Route path='/create' element={<Create />}></Route>
           </Routes>
         </div>
       </Router>
