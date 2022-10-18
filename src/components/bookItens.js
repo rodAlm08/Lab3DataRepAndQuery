@@ -27,5 +27,5 @@ export class BookItens extends React.Component {
             </div>
  */}
 
-     
+
 }
