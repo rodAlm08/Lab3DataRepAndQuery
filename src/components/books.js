@@ -1,6 +1,11 @@
 import React from "react";
 import { BookItens } from "./bookItens";
 
+/**
+ * Books component contains the books to be displayed in the Read component. Each Item
+ * on the list is represented by the BookItem component. 
+ */
+
 export class Books extends React.Component{
     render(){
 

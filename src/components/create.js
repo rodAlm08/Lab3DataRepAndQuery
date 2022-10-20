@@ -2,6 +2,8 @@ import React from "react";
 
 //this component will be exported to be imported in App.js
 //React.component is class that has all the functionality to create components 
+
+ 
 export class Create extends React.Component {
     
     //you should bind the events otherwise won't work
@@ -13,7 +15,9 @@ export class Create extends React.Component {
         this.onChangeBookCover=this.onChangeBookCover.bind(this);
         this.onChangeAuthorTitle=this.onChangeAuthorTitle.bind(this);
 
-
+ /*
+        state object contains a single property that is an array of books with 3 entries
+    */
         this.state = {
             title:'',
             cover:'',
@@ -60,9 +64,11 @@ export class Create extends React.Component {
         return (
 
             <div>
-                {/* insert the form with handlers that are going to handle the actions */}
+                {/* insert the form with handlers that are going to handle the actions and update the server */}
                     <form onSubmit={this.handleSubmit}>
-
+                        {/*part of class form-group that will have a label and an input box
+                        that will change the state.title after calling the method
+                         */}
                         <div className="form-group">
                             <label>Add Book Title: </label>                            
                             <input type="text"
@@ -72,7 +78,9 @@ export class Create extends React.Component {
                             />
                         </div>
 
-                        
+                          {/*part of class form-group that will have a label and an input box
+                        that will change the state.cover  after calling the method
+                         */}
                         <div className="form-group">
                             <label>Add Book Cover: </label>                            
                             <input type="text"
@@ -82,7 +90,9 @@ export class Create extends React.Component {
                             />
                         </div>
 
-                        
+                          {/*part of class form-group that will have a label and an input box
+                        that will change the state.author  after calling the method
+                         */}
                         <div className="form-group">
                             <label>Add Book Author: </label>                            
                             <input type="text"
@@ -92,9 +102,12 @@ export class Create extends React.Component {
                             />
                         </div>
 
-                        <input type="submit" value="Submit" />
-                    </form>
-              
+                    {/*submit button in the form that will take all the changes and update 
+                    our state after submting it
+                         */}
+                    <input type="submit" value="Submit" />
+                </form>
+
             </div>
 
 

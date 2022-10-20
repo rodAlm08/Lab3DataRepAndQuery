@@ -1,12 +1,19 @@
 import React from "react";
-import { Books } from "./books";
-import { Card } from "react-bootstrap";
+import { Books } from "./books";//import Books as it will be updated here
+import { Card } from "react-bootstrap";//use Card from react bootstrap that will do all the hard work to us
+
 
 export class BookItens extends React.Component {
 
     render() {
         return (
 
+/**
+ * The BookItems component displays information about a single book
+ * The information to displayed is passed down from the Read component via the 
+ * Books component to individual BookItem components. 
+ * 
+ */
             <Card>
                 <Card.Header>{this.props.book.title}</Card.Header>
                 <Card.Body>
